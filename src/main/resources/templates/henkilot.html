@@ -1,0 +1,17 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<body>
+<h1> Thymeleaf page !</h1>
+
+<ul>
+    <li th:each="alkio : ${henkilot}">
+        <span th:text="${alkio.nimi}">hello world!</span>
+    </li>
+</ul>
+
+<form th:action="@{/addPerson}" method="POST">
+    <input type="text" name="nimi"/>
+    <input type="submit"/>
+</form>
+
+</body>
+</html>
